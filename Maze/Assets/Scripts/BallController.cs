@@ -8,16 +8,24 @@ using System.Linq;
 
 public class BallController : MonoBehaviour
 {
+    public int PLe;
     public float speed;
     private Rigidbody rb;
     public int count;
     public GameObject sphere;
     public string String;
+    public Text countText;
+    
+    public Text winText;
 
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
+        count = 0;
+        setCountText();
+        winText.text = "";
     }
 
 
@@ -47,9 +55,29 @@ public class BallController : MonoBehaviour
             {
                 other.gameObject.SetActive(false);
                 sphere.gameObject.SetActive(false);
-               
+
+                count = count + 1;
+                setCountText();
+
             }
            
+        }
+    }
+    public void UpdatePL(int PL)
+    {
+        //WIN
+        PLe = PL;
+        Debug.Log("PLalidome number" + PLe);
+    }
+
+    void setCountText()
+    {
+        countText.text = "Palindrome Picked: " + count.ToString();
+        if (count == PLe)
+        {
+            Debug.Log("count" + count);
+            Debug.Log("Ple" + PLe);
+            winText.text = "All Palindrome Picked: " + PLe.ToString();
         }
     }
 }

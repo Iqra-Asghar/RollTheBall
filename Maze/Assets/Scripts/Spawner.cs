@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 using UnityEngine.UI;
 public class Spawner : MonoBehaviour
 {
+    private BallController bct;
+    
     private string randomString;
     public int thestringlength;
     private static int palindromeLength;
@@ -14,7 +16,11 @@ public class Spawner : MonoBehaviour
     public GameObject Cube;
     public GameObject Sphere;
     public float maxPos = 0f;
-    public float minPos = 30f; 
+    public float minPos = 30f;
+    void Awake()
+    {
+        bct = GameObject.FindObjectOfType<BallController>();
+    }
     public void spawn()
     {
         List<int> list = new List<int>();
@@ -89,6 +95,7 @@ public class Spawner : MonoBehaviour
 
         palindromeLength = Random.Range(3, 10);
         Spawner.GetSetValue = palindromeLength;
+        bct.UpdatePL(palindromeLength);
         spawn();
     }
 }

@@ -16,7 +16,7 @@ PlayerSettings:
   productName: Maze
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.90397453, g: 0.71960664, b: 0.9716981, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.13207549, g: 0.12522252, b: 0.12522252, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -42,12 +42,11 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 2
-  - logo: {fileID: 0}
+  - logo: {fileID: 21300000, guid: 48f6edf8c3d3c2b4fade59e025b48ea1, type: 3}
     duration: 2.4
-  - logo: {fileID: 0}
+  - logo: {fileID: 21300000, guid: 53ec4a7ff0e3e2e4b9e6447b20b332fe, type: 3}
     duration: 2
-  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: d88dd21dcca882b45aa0103f334abc6c,
-    type: 3}
+  m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
